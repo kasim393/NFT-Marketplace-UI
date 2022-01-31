@@ -1,0 +1,112 @@
+.login{
+  display: flex;
+  font-family: var(--font-family);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.login-container {
+  background: #2A2D3A;
+  border-radius: 20px;
+  padding: 2rem;
+  min-width: 30%;
+}
+.login-container h1{
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 42px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.login-formGroup{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.login-formGroup label{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.login-formGroup input{
+  background: #1B1A21;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.login-formGroup textarea{
+  background: #2D2E36;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+}
+.login-formGroup select{
+  background: #2D2E36;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  text-overflow: ellipsis;
+}
+.login-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-writeButton{
+  /* float: right; */
+  background: var(--primary-btn);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+.login-reg-writeButton{
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 12px 30px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+@media screen and (max-width: 550px){
+  .login{
+    padding:2rem 1.5rem !important;
+
+  }
+  .login-container{
+    padding: 1.5rem 1rem;
+  }
+  .login-container h1{
+    /* display: none; */
+      font-size: 36px;
+      margin-top: 0;
+  }
+  .login-formGroup label{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+}

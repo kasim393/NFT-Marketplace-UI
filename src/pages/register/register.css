@@ -1,0 +1,112 @@
+.register{
+  display: flex;
+  font-family: var(--font-family);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.register-container {
+  background: #2A2D3A;
+  border-radius: 20px;
+  padding: 2rem;
+  min-width: 30%;
+}
+.register-container h1{
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 42px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.register-formGroup{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.register-formGroup label{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+.register-formGroup input{
+  background: #1B1A21;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.register-formGroup textarea{
+  background: #2D2E36;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+}
+.register-formGroup select{
+  background: #2D2E36;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  text-overflow: ellipsis;
+}
+.register-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.register-writeButton{
+  /* float: right; */
+  background: var(--primary-btn);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+.reg-login-writeButton{
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 12px 30px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+@media screen and (max-width: 550px){
+  .register{
+    padding:2rem 1.5rem !important;
+
+  }
+  .register-container{
+    padding: 1.5rem 1rem;
+  }
+  .register-container h1{
+    /* display: none; */
+      font-size: 36px;
+      margin-top: 0;
+  }
+  .register-formGroup label{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+}
