@@ -28,9 +28,9 @@ $ npm start
 ```
 
 # Screenshot
-!["React Movie App"]()
+!["React Movie App"](https://raw.githubusercontent.com/kasim393/NFT-Marketplace/main/src/assets/ss1.png)
 
-!["React Movie App"]()
+!["React Movie App"](https://raw.githubusercontent.com/kasim393/NFT-Marketplace/main/src/assets/ss4.png)
 
 # Resource
 
