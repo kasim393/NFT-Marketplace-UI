@@ -81,7 +81,7 @@ const Menu = () => (
             ): (
               <>
               <Link to="/login"> 
-              <button type='button' className='primary-btn' >Sign In</button>
+              <button type='button' className='primary-btn' onClick={handleLogin} >Sign In</button>
               </Link>
               <Link to="/register"> 
                 <button type='button' className='secondary-btn'>Sign Up</button>
