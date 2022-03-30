@@ -46,6 +46,6 @@ $ npm start
 - [x] Register page
 - [x] Create item page
 - [x] Profile page
-- [ ] Payment
+- [x] Payment
 
  
