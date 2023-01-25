@@ -5,12 +5,12 @@ const Create = () => {
   return (
     <div className='create section__padding'>
       <div className="create-container">
-        <h1>Create new Item</h1>
+        <h1>Create New Item</h1>
         <p className='upload-file'>Upload File</p>
         <div className="upload-img-show">
             <h3>JPG, PNG, GIF, SVG, WEBM, MP3, MP4. Max 100mb.</h3>
             <img src={Image} alt="banner" />
-            <p>Drag and Drop File</p>
+            <p>Drag and Drop Files</p>
         </div>
         <form className='writeForm' autoComplete='off'>
           
