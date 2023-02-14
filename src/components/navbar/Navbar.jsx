@@ -1,8 +1,8 @@
 import React,{ useState} from 'react'
 import './navbar.css'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import logo from '../../assets/logo.png'
 import {  Link } from "react-router-dom";
+
 
 const Menu = () => (
   <>
@@ -27,9 +27,11 @@ const Menu = () => (
     <div className='navbar'>
       <div className="navbar-links">
         <div className="navbar-links_logo">
-          <img src={logo} alt="logo" />
+          {/* <img src={logo} alt="logo" /> */}
           <Link to="/"> 
-            <h1>CryptoKet</h1>
+           <h1>GearFi
+           <sup style={{ color: 'lightblue' }}>Testnet</sup>
+           </h1>
           </Link>
         </div>
         <div className="navbar-links_container">
@@ -49,12 +51,12 @@ const Menu = () => (
         </>
       ): (
         <>
-        <Link to="/login"> 
+        {/* <Link to="/login"> 
          <button type='button' className='primary-btn' onClick={handleLogin} >Sign In</button>
         </Link>
         <Link to="/register"> 
           <button type='button' className='secondary-btn'>Sign Up</button>
-        </Link>
+        </Link> */}
         </>
       )}
        
