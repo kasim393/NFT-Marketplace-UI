@@ -55,7 +55,7 @@
 /* Added CSS */
 
 .hero-section {
-  background-color: rgba(165, 165, 165, 0.1); /* Dark grey background */
+  /* background-color: rgba(165, 165, 165, 0.1);  */
   height: 100vh; /* Set height to fill viewport */
   display: flex;
   justify-content: center;
