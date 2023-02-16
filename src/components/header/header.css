@@ -54,6 +54,46 @@
 
 /* Added CSS */
 
+.hero-section {
+  background-color: rgba(165, 165, 165, 0.1); /* Dark grey background */
+  height: 100vh; /* Set height to fill viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+  color: #ffffff; /* White text color */
+  padding: 20px;
+}
+
+h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #ffffff; /* White background color */
+  color: #333333; /* Dark grey text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ffcc00; /* Yellow background color on hover */
+  color: #333333;
+}
 
 
 

@@ -62,7 +62,7 @@ const Header = () => {
   //   ]
   // };
   return (
-  <div>
+  <div class="hero-section">
     <div className="heading">
       <h2>Welcome to</h2>
       <p>Introducing the revolutionary way to collect your NFT's </p>
