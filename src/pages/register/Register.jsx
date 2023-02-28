@@ -21,7 +21,11 @@ const Register = () => {
           />
           </div>
           <div className="register-formGroup">
-            <label>Full Name</label>
+            <label>First Name</label>
+            <input type="text" placeholder='Name' />
+          </div>
+          <div className="register-formGroup">
+            <label>Last Name</label>
             <input type="text" placeholder='Name' />
           </div>
           <div className="register-formGroup">

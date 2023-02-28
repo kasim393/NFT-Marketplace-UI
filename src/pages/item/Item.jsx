@@ -2,8 +2,9 @@ import React from 'react';
 import './item.css'
 import creator from '../../assets/seller2.png'
 import item from '../../assets/item1.png'
+import { Bids } from '../../components';
 
-const Item = () => {
+const Item = (_tokenID, contractAddress) => {
 
 
 

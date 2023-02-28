@@ -1,143 +1,81 @@
-import React from 'react'
-import './bids.css'
-import { AiFillHeart,AiOutlineHeart } from "react-icons/ai";
-import bids1 from '../../assets/bids1.png'
-import bids2 from '../../assets/bids2.png'
-import bids3 from '../../assets/bids3.png'
-import bids4 from '../../assets/bids4.png'
-import bids5 from '../../assets/bids5.png'
-import bids6 from '../../assets/bids6.png'
-import bids7 from '../../assets/bids7.png'
-import bids8 from '../../assets/bids8.png'
+import { useNFTBalances } from 'react-moralis';
+import { AiFillHeart } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import './bids.css'
 
-const Bids = ({title}) => {
-  return (
-    <div className='bids section__padding'>
-      <div className="bids-container">
-        <div className="bids-container-text">
-          <h1>{title}</h1>
+export default function Bids() {
+
+  const { data, error, isLoading } = useNFTBalances(
+    {
+      chain: "0x1",
+      address: "0x0B96D62349DeF159655ca16aF82F00DDe3737D4B",
+    },
+    {
+      autoFetch: true,
+    },
+  );
+
+  try {
+  
+    if (isLoading) {
+      return (
+        <p>isLoading</p>
+      );
+    }
+  
+    if (error) {
+      return (
+        <div>
+          <p>{error.name}</p>
+          <p>{error.message}</p>
         </div>
-        <div className="bids-container-card">
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids1} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Abstact Smoke Red</p>
+      );
+    }
+  
+    if (!data?.result || data.result.length === 0) {
+      return <p>No result</p>
+    }
+    return (
+      <div style={{ display: "", gridTemplateColumns: "repeat(2, 1fr)", gridGap: "20px"  }}>     
+        {data.result.map((nft) => (
+          <div className="card-column">
+            {console.log(nft.token_id)}
+            {console.log(nft.token_address)}
+              <Link to={`/post/{nft.token_id}`}>
+              <div className="bids-card">
+                <div className="bids-card-top">
+                  {nft.metadata?.image && (
+                    <img
+                      src={nft.metadata?.image.replace('ipfs://', 'https://ipfs.moralis.io:2053/ipfs/')}
+                      alt=""
+                    />
+                  )}
+                  
+                    <p className="bids-title">{nft.metadata.name}</p>
+                  
+                </div>
+                <div className="bids-card-bottom">
+                  <p>0.20 <span>ETH</span></p>
+            <p><AiFillHeart />Token ID: {""}</p>
+                </div>
+              </div>
               </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>1.25 <span>ETH</span></p>
-                <p> <AiFillHeart /> 92</p>
-              </div>
             </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids2} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Mountain Landscape</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.20 <span>ETH</span></p>
-                <p> <AiFillHeart /> 25</p>
-              </div>
-            </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids3} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Paint Color on Wall</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.55 <span>ETH</span></p>
-                <p> <AiFillHeart /> 55</p>
-              </div>
-            </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids4} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Abstract Patern</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.87 <span>ETH</span></p>
-                <p> <AiFillHeart /> 82</p>
-              </div>
-            </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids5} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">White Line Grafiti</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.09 <span>ETH</span></p>
-                <p> <AiFillHeart /> 22</p>
-              </div>
-            </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids6} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Abstract Triangle</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.90 <span>ETH</span></p>
-                <p> <AiFillHeart /> 71</p>
-              </div>
-            </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids7} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Lake Landscape</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.52 <span>ETH</span></p>
-                <p> <AiFillHeart /> 63</p>
-              </div>
-            </div>
-          </div>
-          <div className="card-column" >
-            <div className="bids-card">
-              <div className="bids-card-top">
-                <img src={bids8} alt="" />
-              <Link to={`/post/123`}>
-              <p className="bids-title">Blue Red Art</p>
-              </Link>
-              </div>
-              <div className="bids-card-bottom">
-                <p>0.85 <span>ETH</span></p>
-                <p> <AiFillHeart /> 66</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  
+          
+          
+        ))}
       </div>
-      <div className="load-more">
-        <button>Load More</button>
-      </div>
-    </div>
-  )
+      
+    );
+ 
+  
+
+  }
+  catch (error) {
+  return null;
+  console.log(error);
+  }
+
 }
-
-export default Bids
+ 

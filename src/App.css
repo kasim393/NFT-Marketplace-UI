@@ -10,7 +10,7 @@ a{
 .gradient__bg{
  
  /* ff 3.6+ */
- background:-moz-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+ background:-moz-radial-gradient(circle at 0% 28%, rgba(0, 40, 84, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
  /* safari 5.1+,chrome 10+ */
  background:-webkit-radial-gradient(circle at 0% 29%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
